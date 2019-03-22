@@ -1,0 +1,236 @@
+service: serverless-GoodGod-hello-world
+
+# The `provider` block defines where your service will be deployed
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: ap-southeast-1
+
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - dynamodb:*
+      Resource: "*"
+    - Effect: "Allow"
+      Action:
+        - s3:*
+      Resource: "*"
+    - Effect: "Allow"
+      Action:
+        - cloudwatch:GetMetricData
+      Resource: "*"
+ 
+# The `functions` block defines what code to deploy
+functions:         
+  Add :
+    handler: Backend/dynamo/project/DynamoPut.insert
+    events:
+      - http:
+          path: DynamoPut
+          integration : lambda
+          method: post
+          cors: true
+
+  Delete :
+    handler: Backend/dynamo/DynamoDelete.delete
+    events:
+      - http:
+          path: DynamoDelete
+          integration : lambda
+          method: get
+          cors: true
+  Scan :
+    handler: Backend/dynamo/DynamoScan.scan
+    events:
+      - http:
+          path: DynamoScan
+          integration : lambda
+          method: get
+          cors: true
+
+  # Update :
+  #   handler: /Dynamo/DynamoUpdate.update
+  #   events:
+  #     - http:
+  #         path: DynamoUpdate
+  #         integration : lambda
+  #         method: post
+  #         cors: true
+  Query :
+    handler: Backend/dynamo/DynamoQuery.query
+    events:
+      - http:
+          path: DynamoQuery
+          integration : lambda
+          method: post
+          cors: true
+  CPUlog :
+    handler: /CloudWatch/CWCPUlog.CPUlog
+    events:
+      - http:
+          path: getCPUlog
+          integration : lambda
+          method: get
+          cors: true
+
+  Bucketlog :
+    handler: handler.getMetricData
+    events:
+      - http:
+          path: getBucketlog
+          integration: lambda
+          method: post
+          cors: true
+  RDSStat :
+    handler: Backend/sts/cloudwatch/rds/rdsStat.RDSStat
+    events:
+      - http:
+          path: RDSState
+          integration: lambda
+          method: post
+          cors: true
+  DdbStat :
+    handler: Backend/sts/cloudwatch/dynamoDB/DdbStat.DdbStat
+    events:
+      - http:
+          path: DdbStat
+          integration: lambda
+          method: post
+          cors: true
+  ELBStat :
+    handler: Backend/sts/cloudwatch/ELB/ELBStat.ELBStat
+    events:
+      - http:
+          path: ELBStat
+          integration: lambda
+          method: post
+          cors: true
+# functions:STS 
+  Request :
+    handler: /sts/sts.request
+    events:
+      - http:
+          path: sts
+          integration : lambda
+          method: get
+          cors: true
+# functions:List-Descaription
+  listec2:
+    handler: handler.listec2
+    events:
+      - http:
+          path: ListEC2
+          integration : lambda
+          method: post
+          cors: true
+
+  ListRDS :
+    handler: Backend/sts/cloudwatch/rds/ListRDS.ListRDS
+    events:
+      - http:
+          path: ListRDS
+          method: post
+          cors: true
+          integration: lambda
+
+  ListS3:
+    handler: handler.listBuckets
+    events:
+      - http:
+          path: ListS3
+          method: post
+          cors: true
+          integration: lambda
+  listDynDB:
+    handler: Backend/sts/cloudwatch/dynamoDB/ListDBOnLocal.listDynDB
+    events:
+      - http:
+          path: listDynDB
+          method: post
+          cors: true
+          integration: lambda
+  ListELB:
+    handler: Backend/sts/cloudwatch/ELB/listELB.ListELB
+    events:
+      - http:
+          path: ListELB
+          method: post
+          cors: true
+          integration: lambda
+  #function EC2CPU-CloudWatch
+  EC2CPU:
+    handler: handler.CPUStat
+    events:
+      - http:
+          path: EC2CPU
+          method: post
+          cors: true
+          integration: lambda
+  #Read application logs
+  ReadApplicationLogs:
+    handler: handler.readApplicationLogs
+    events:
+      - http:
+          path: applicationlogs/read
+          method: post 
+          cors: true
+          integration: lambda
+  #Write application logs
+  WriteApplicationLogs:
+    handler: handler.writeApplicationLogs
+    events:
+      - http:
+          path: applicationlogs/write
+          method: post
+          cors: true
+          integration: lambda
+
+  ListP :
+    handler: Backend/dynamo/project/ListProjects.ListP
+    events:
+      - http:
+          path: ListProject
+          integration : lambda
+          method: post
+          cors: true 
+  ListCus :
+    handler: Backend/dynamo/customer/ListCustomers.ListCus
+    events:
+      - http:
+          path: ListCustomer
+          integration : lambda
+          method: get
+          cors: true 
+  
+  #WriteImage
+  WriteImage:
+    handler: handler.writeImage
+    events:
+      - http:
+          path: images
+          method: post
+          cors: true
+          integration: lambda
+#ListUserCognitor
+  ListUserCognitor:
+    handler: handler.ListAllUser
+    events:
+      - http:
+          path: listusercognitor
+          method: post
+          cors: true
+          integration: lambda
+
+#Notification
+  NotificationLine:
+    handler: handler.SNSLine
+    events:
+      - http:
+          path: NotificationLine
+          method: post
+          cors: true
+          integration: lambda
+
+
+ 

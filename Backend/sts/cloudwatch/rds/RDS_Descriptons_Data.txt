@@ -1,0 +1,307 @@
+{
+    "data": {
+        "ResponseMetadata": {
+            "RequestId": "389c6f29-c215-49ab-a38e-87b00693dc6f"
+        },
+        "DBInstances": [
+            {
+                "DBInstanceIdentifier": "prduniappmfu",
+                "DBInstanceClass": "db.m4.large",
+                "Engine": "mariadb",
+                "DBInstanceStatus": "available",
+                "MasterUsername": "prduniappmfu",
+                "DBName": "prduniappmfu",
+                "Endpoint": {
+                    "
+                    ": "prduniappmfu.c3rwyo7vwmob.ap-southeast-1.rds.amazonaws.com",
+                    "Port": 3306,
+                    "HostedZoneId": "Z2G0U3KFCY8NZ5"
+                },
+                "AllocatedStorage": 200,
+                "InstanceCreateTime": "2018-08-31T09:28:29.644Z",
+                "PreferredBackupWindow": "00:00-00:30",
+                "BackupRetentionPeriod": 7,
+                "DBSecurityGroups": [],
+                "VpcSecurityGroups": [
+                    {
+                        "VpcSecurityGroupId": "sg-09a15671",
+                        "Status": "active"
+                    }
+                ],
+                "DBParameterGroups": [
+                    {
+                        "DBParameterGroupName": "mariadb10-2",
+                        "ParameterApplyStatus": "in-sync"
+                    }
+                ],
+                "AvailabilityZone": "ap-southeast-1a",
+                "DBSubnetGroup": {
+                    "DBSubnetGroupName": "prd-db-subnetgroup",
+                    "DBSubnetGroupDescription": "PRD-DB-SubnetGroup",
+                    "VpcId": "vpc-bb246adc",
+                    "SubnetGroupStatus": "Complete",
+                    "Subnets": [
+                        {
+                            "SubnetIdentifier": "subnet-8ef80ed7",
+                            "SubnetAvailabilityZone": {
+                                "Name": "ap-southeast-1c"
+                            },
+                            "SubnetStatus": "Active"
+                        },
+                        {
+                            "SubnetIdentifier": "subnet-e78db480",
+                            "SubnetAvailabilityZone": {
+                                "Name": "ap-southeast-1a"
+                            },
+                            "SubnetStatus": "Active"
+                        },
+                        {
+                            "SubnetIdentifier": "subnet-7c0d2435",
+                            "SubnetAvailabilityZone": {
+                                "Name": "ap-southeast-1b"
+                            },
+                            "SubnetStatus": "Active"
+                        }
+                    ]
+                },
+                "PreferredMaintenanceWindow": "tue:21:08-tue:21:38",
+                "PendingModifiedValues": {},
+                "LatestRestorableTime": "2019-03-04T08:00:00.000Z",
+                "MultiAZ": false,
+                "EngineVersion": "10.2.12",
+                "AutoMinorVersionUpgrade": false,
+                "ReadReplicaDBInstanceIdentifiers": [],
+                "ReadReplicaDBClusterIdentifiers": [],
+                "LicenseModel": "general-public-license",
+                "Iops": 1000,
+                "OptionGroupMemberships": [
+                    {
+                        "OptionGroupName": "default:mariadb-10-2",
+                        "Status": "in-sync"
+                    }
+                ],
+                "PubliclyAccessible": true,
+                "StatusInfos": [],
+                "StorageType": "io1",
+                "DbInstancePort": 0,
+                "StorageEncrypted": true,
+                "KmsKeyId": "arn:aws:kms:ap-southeast-1:427303592433:key/41b342c9-1e3a-499f-a6b4-d6ac77914564",
+                "DbiResourceId": "db-LYWIZC7XMAFORSP4KDJG46GCZA",
+                "CACertificateIdentifier": "rds-ca-2015",
+                "DomainMemberships": [],
+                "CopyTagsToSnapshot": true,
+                "MonitoringInterval": 60,
+                "EnhancedMonitoringResourceArn": "arn:aws:logs:ap-southeast-1:427303592433:log-group:RDSOSMetrics:log-stream:db-LYWIZC7XMAFORSP4KDJG46GCZA",
+                "MonitoringRoleArn": "arn:aws:iam::427303592433:role/rds-monitoring-role",
+                "DBInstanceArn": "arn:aws:rds:ap-southeast-1:427303592433:db:prduniappmfu",
+                "IAMDatabaseAuthenticationEnabled": false,
+                "PerformanceInsightsEnabled": false,
+                "EnabledCloudwatchLogsExports": [
+                    "audit",
+                    "error"
+                ],
+                "ProcessorFeatures": [],
+                "DeletionProtection": false,
+                "AssociatedRoles": []
+            },
+            {
+                "DBInstanceIdentifier": "situniappmfu",
+                "DBInstanceClass": "db.t2.medium",
+                "Engine": "mariadb",
+                "DBInstanceStatus": "available",
+                "MasterUsername": "situniappmfu",
+                "DBName": "situniappmfu",
+                "Endpoint": {
+                    "Address": "situniappmfu.c3rwyo7vwmob.ap-southeast-1.rds.amazonaws.com",
+                    "Port": 3306,
+                    "HostedZoneId": "Z2G0U3KFCY8NZ5"
+                },
+                "AllocatedStorage": 30,
+                "InstanceCreateTime": "2018-06-27T04:09:32.403Z",
+                "PreferredBackupWindow": "15:54-16:24",
+                "BackupRetentionPeriod": 7,
+                "DBSecurityGroups": [],
+                "VpcSecurityGroups": [
+                    {
+                        "VpcSecurityGroupId": "sg-14a4536c",
+                        "Status": "active"
+                    }
+                ],
+                "DBParameterGroups": [
+                    {
+                        "DBParameterGroupName": "mariadb10-2",
+                        "ParameterApplyStatus": "in-sync"
+                    }
+                ],
+                "AvailabilityZone": "ap-southeast-1a",
+                "DBSubnetGroup": {
+                    "DBSubnetGroupName": "sit-db-subnetgroup",
+                    "DBSubnetGroupDescription": "SIT-DB-SubnetGroup",
+                    "VpcId": "vpc-bb246adc",
+                    "SubnetGroupStatus": "Complete",
+                    "Subnets": [
+                        {
+                            "SubnetIdentifier": "subnet-200a2369",
+                            "SubnetAvailabilityZone": {
+                                "Name": "ap-southeast-1b"
+                            },
+                            "SubnetStatus": "Active"
+                        },
+                        {
+                            "SubnetIdentifier": "subnet-b1fa0ce8",
+                            "SubnetAvailabilityZone": {
+                                "Name": "ap-southeast-1c"
+                            },
+                            "SubnetStatus": "Active"
+                        },
+                        {
+                            "SubnetIdentifier": "subnet-2f8cb548",
+                            "SubnetAvailabilityZone": {
+                                "Name": "ap-southeast-1a"
+                            },
+                            "SubnetStatus": "Active"
+                        }
+                    ]
+                },
+                "PreferredMaintenanceWindow": "sat:19:17-sat:19:47",
+                "PendingModifiedValues": {},
+                "LatestRestorableTime": "2019-03-04T08:00:00.000Z",
+                "MultiAZ": false,
+                "EngineVersion": "10.2.12",
+                "AutoMinorVersionUpgrade": false,
+                "ReadReplicaDBInstanceIdentifiers": [],
+                "ReadReplicaDBClusterIdentifiers": [],
+                "LicenseModel": "general-public-license",
+                "OptionGroupMemberships": [
+                    {
+                        "OptionGroupName": "default:mariadb-10-2",
+                        "Status": "in-sync"
+                    }
+                ],
+                "PubliclyAccessible": true,
+                "StatusInfos": [],
+                "StorageType": "gp2",
+                "DbInstancePort": 0,
+                "StorageEncrypted": true,
+                "KmsKeyId": "arn:aws:kms:ap-southeast-1:427303592433:key/41b342c9-1e3a-499f-a6b4-d6ac77914564",
+                "DbiResourceId": "db-SLX5HCAV5LEQZHFR3L5KRE7JJY",
+                "CACertificateIdentifier": "rds-ca-2015",
+                "DomainMemberships": [],
+                "CopyTagsToSnapshot": true,
+                "MonitoringInterval": 0,
+                "DBInstanceArn": "arn:aws:rds:ap-southeast-1:427303592433:db:situniappmfu",
+                "IAMDatabaseAuthenticationEnabled": false,
+                "PerformanceInsightsEnabled": false,
+                "EnabledCloudwatchLogsExports": [
+                    "audit",
+                    "error"
+                ],
+                "ProcessorFeatures": [],
+                "DeletionProtection": false,
+                "AssociatedRoles": []
+            },
+            {
+                "DBInstanceIdentifier": "uatuniappmfu",
+                "DBInstanceClass": "db.t2.medium",
+                "Engine": "mariadb",
+                "DBInstanceStatus": "available",
+                "MasterUsername": "uatuniappmfu",
+                "DBName": "uatuniappmfu",
+                "Endpoint": {
+                    "Address": "uatuniappmfu.c3rwyo7vwmob.ap-southeast-1.rds.amazonaws.com",
+                    "Port": 3306,
+                    "HostedZoneId": "Z2G0U3KFCY8NZ5"
+                },
+                "AllocatedStorage": 100,
+                "InstanceCreateTime": "2018-06-27T04:11:56.389Z",
+                "PreferredBackupWindow": "14:31-15:01",
+                "BackupRetentionPeriod": 7,
+                "DBSecurityGroups": [],
+                "VpcSecurityGroups": [
+                    {
+                        "VpcSecurityGroupId": "sg-2ea55256",
+                        "Status": "active"
+                    }
+                ],
+                "DBParameterGroups": [
+                    {
+                        "DBParameterGroupName": "mariadb10-2",
+                        "ParameterApplyStatus": "in-sync"
+                    }
+                ],
+                "AvailabilityZone": "ap-southeast-1b",
+                "DBSubnetGroup": {
+                    "DBSubnetGroupName": "uat-db-subnetgroup",
+                    "DBSubnetGroupDescription": "UAT-DB-SubnetGroup",
+                    "VpcId": "vpc-bb246adc",
+                    "SubnetGroupStatus": "Complete",
+                    "Subnets": [
+                        {
+                            "SubnetIdentifier": "subnet-250a236c",
+                            "SubnetAvailabilityZone": {
+                                "Name": "ap-southeast-1b"
+                            },
+                            "SubnetStatus": "Active"
+                        },
+                        {
+                            "SubnetIdentifier": "subnet-f5e315ac",
+                            "SubnetAvailabilityZone": {
+                                "Name": "ap-southeast-1c"
+                            },
+                            "SubnetStatus": "Active"
+                        },
+                        {
+                            "SubnetIdentifier": "subnet-128fb675",
+                            "SubnetAvailabilityZone": {
+                                "Name": "ap-southeast-1a"
+                            },
+                            "SubnetStatus": "Active"
+                        }
+                    ]
+                },
+                "PreferredMaintenanceWindow": "tue:21:27-tue:21:57",
+                "PendingModifiedValues": {},
+                "LatestRestorableTime": "2019-03-04T08:00:00.000Z",
+                "MultiAZ": false,
+                "EngineVersion": "10.2.12",
+                "AutoMinorVersionUpgrade": false,
+                "ReadReplicaDBInstanceIdentifiers": [],
+                "ReadReplicaDBClusterIdentifiers": [],
+                "LicenseModel": "general-public-license",
+                "OptionGroupMemberships": [
+                    {
+                        "OptionGroupName": "default:mariadb-10-2",
+                        "Status": "in-sync"
+                    }
+                ],
+                "PubliclyAccessible": true,
+                "StatusInfos": [],
+                "StorageType": "gp2",
+                "DbInstancePort": 0,
+                "StorageEncrypted": true,
+                "KmsKeyId": "arn:aws:kms:ap-southeast-1:427303592433:key/41b342c9-1e3a-499f-a6b4-d6ac77914564",
+                "DbiResourceId": "db-6TEIQ45LDAVM77L2SDBA5B3SPA",
+                "CACertificateIdentifier": "rds-ca-2015",
+                "DomainMemberships": [],
+                "CopyTagsToSnapshot": true,
+                "MonitoringInterval": 0,
+                "DBInstanceArn": "arn:aws:rds:ap-southeast-1:427303592433:db:uatuniappmfu",
+                "IAMDatabaseAuthenticationEnabled": false,
+                "PerformanceInsightsEnabled": false,
+                "EnabledCloudwatchLogsExports": [
+                    "audit",
+                    "error"
+                ],
+                "ProcessorFeatures": [],
+                "DeletionProtection": false,
+                "AssociatedRoles": []
+            }
+        ]
+    },
+    "credentials": {
+        "AccessKeyId": "ASIAWG7KHMHYS4MGCN6Z",
+        "SecretAccessKey": "TvGDpeJ25vDzv53xrsLHtRbG8TXpJ1bNBHfrnVcx",
+        "SessionToken": "FQoGZXIvYXdzEEIaDDBbI4K9uol9dbbFBSLqAfB5932XmlAgKLboEurXJ73MqkwMjmxrC1mIJzySzo8lrR0FoeHLFWRyZjEUiNvAoKH4JF02xyhBe8CDxlxLlWcHAR7Kpk1Cf//Fq5g+Z0slaWV35ndIHbYsBaAYNEDJW2twzglQYZT7YD8cEnQR9Q75vBJEcfz4epxXVaZ0fk7+b9U864l3S47crMb6DDZXroztK0HbFbO1wULh+4I1/IQ1Fv3X2IYOSiCuz4uNOty1PbcW4r/7MFnwlrbVAcJyPrNGsb/IMt2yrp1dYcstNslFQsX2j0DpT8akIIqbTiigoT45fSZ4M1IBkyiTuPPjBQ==",
+        "Expiration": "2019-03-04T09:04:35.000Z"
+    }
+}
